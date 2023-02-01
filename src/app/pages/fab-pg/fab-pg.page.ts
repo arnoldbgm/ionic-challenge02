@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fab-pg.page.scss'],
 })
 export class FabPgPage implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit() {}
 
-  ngOnInit() {
+  onClick() {
+    console.log('Boton flotante pulsado');
   }
-
 }

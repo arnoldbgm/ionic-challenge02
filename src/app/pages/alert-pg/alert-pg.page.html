@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header mode="ios">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
@@ -16,8 +16,27 @@
         </ion-text>
       </ion-col>
       <ion-col size="12">
-        <ion-button (click)="tapCounter()">Click Me</ion-button>
+        <ion-button
+          (click)="tapCounter()"
+          expand="full"
+          shape="round"
+          size="large"
+          fill="outline"
+          >Click Me</ion-button
+        >
       </ion-col>
     </ion-row>
+    <ion-col size="12">
+      <ion-text color="primary">
+        <h1>Awesome text</h1>
+      </ion-text>
+      <ion-button
+        (click)="presentAlert()"
+        expand="full"
+        shape="round"
+        size="large"
+        >Click here</ion-button
+      >
+    </ion-col>
   </ion-grid>
 </ion-content>

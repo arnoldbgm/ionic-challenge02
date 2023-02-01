@@ -22,8 +22,8 @@ export class AlertPgPage {
   async presentAlert() {
     const alert = await this.alertController.create({
       header: 'Alert',
-      subHeader: 'Important message',
-      message: 'This is an alert!',
+      subHeader: 'Subtitle',
+      message: 'This is a message',
       buttons: ['OK'],
     });
 

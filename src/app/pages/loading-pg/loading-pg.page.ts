@@ -10,9 +10,9 @@ export class LoadingPgPage {
 
   async showLoading() {
     const loading = await this.loadingCtrl.create({
-      message: 'Loading...',
-      duration: 3000,
-      spinner: 'circular',
+      message: 'Por favor espere ...',
+      duration: 2000,
+      spinner: 'lines-sharp',
     });
 
     loading.present();

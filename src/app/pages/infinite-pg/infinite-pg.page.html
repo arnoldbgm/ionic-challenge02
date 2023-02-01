@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header mode="ios">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/"></ion-back-button>
@@ -9,17 +9,16 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let item of items; let index">
-      <ion-avatar slot="start">
-        <img
-          [src]="'https://picsum.photos/80/80?random=' + index"
-          alt="avatar"
-        />
-      </ion-avatar>
-      <ion-label>{{ item }}</ion-label>
+    <ion-item *ngFor="let item of user; let i = index">
+      <ion-label> Item {{ i + 1 }}</ion-label>
     </ion-item>
   </ion-list>
-  <ion-infinite-scroll (ionInfinite)="onIonInfinite($event)">
-    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+
+  <ion-infinite-scroll (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="lines-sharp"
+      loadingText="Cargando mas datos ..."
+    >
+    </ion-infinite-scroll-content>
   </ion-infinite-scroll>
 </ion-content>
